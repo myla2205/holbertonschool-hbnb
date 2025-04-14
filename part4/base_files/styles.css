@@ -11,23 +11,23 @@
     --border_radius_place_and_reviews: 10px;
 
     /* Main Colors */
-    --primary: #FF5A5F;
+    --primary: #d30a65;
     /* Warm coral - main brand color */
     --secondary: #B6B6D5;
     /* Keeping your purple as secondary */
-    --accent: #00A699;
+    --accent: #66a39e;
     /* Teal - for accents and CTAs */
 
     /* Purple Theme */
-    --purple-light: #E9E3F1;
+    --purple-light: #757179;
     /* Your light purple - for hover states */
-    --pink-dark: #B03060;
+    --pink-dark: #dbced2;
     /* Your dark purple - for depth */
 
     /* Neutral Colors */
-    --grey-light: #E6E5E7;
+    --grey-light: #6a676c;
     /* Your light grey - backgrounds */
-    --grey-medium: #757179;
+    --grey-medium: #48474a;
     /* Your grey - secondary text */
     --white: #FFFFFF;
     /* Pure white - cards/containers */
