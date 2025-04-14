@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Beach House - Details</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" alt="hbnb logo" src="images/logo.png">
+    </header>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="login.html" class="nav-login" id="login-link">Login</a>
+    </nav>
+
+    <main class="container">
+        <section id="place-details">
+            <!-- Place details will be dynamically inserted here -->
+        </section>
+
+        <section id="reviews-section" class="reviews">
+            <h2>Reviews</h2>
+            <div id="reviews-container">
+                <!-- Reviews will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="add-review" class="add-review" style="display: none;">
+            <h2>Add a Review</h2>
+            <form id="review-form" class="form">
+                <textarea name="review-text" placeholder="Write your review here..." required></textarea>
+                <select name="rating" required>
+                    <option value="">Select Rating</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

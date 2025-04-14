@@ -1,0 +1,666 @@
+/*
+  This is a SAMPLE File to get you started. Follow the instructions on the project to complete the tasks.
+  You'll probably need to override some of these styles.
+*/
+
+:root {
+    /* Existing layout variables */
+    --margin_place_and_review_cards: 20px;
+    --padding_place_and_reviews: 10px;
+    --border_place_and_reviews: 1px solid #ddd;
+    --border_radius_place_and_reviews: 10px;
+
+    /* Main Colors */
+    --primary: #FF5A5F;
+    /* Warm coral - main brand color */
+    --secondary: #B6B6D5;
+    /* Keeping your purple as secondary */
+    --accent: #00A699;
+    /* Teal - for accents and CTAs */
+
+    /* Purple Theme */
+    --purple-light: #E9E3F1;
+    /* Your light purple - for hover states */
+    --pink-dark: #B03060;
+    /* Your dark purple - for depth */
+
+    /* Neutral Colors */
+    --grey-light: #E6E5E7;
+    /* Your light grey - backgrounds */
+    --grey-medium: #757179;
+    /* Your grey - secondary text */
+    --white: #FFFFFF;
+    /* Pure white - cards/containers */
+
+    /* Functional Colors */
+    --success: #34A853;
+    /* Green - success messages */
+    --error: #FF385C;
+    /* Red - error states */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--grey-light);
+}
+
+/* Header styles */
+.header {
+    background-color: var(--primary);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+}
+
+.login-button {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Navigation styles */
+.nav {
+    background-color: var(--white);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+.nav a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.nav .nav-login {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+
+.nav a:hover {
+    color: var(--primary);
+}
+
+/* Container styles */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Places list container */
+#places-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Place card styles */
+.place-card {
+    background-color: var(--white);
+    border: var(--border_place_and_reviews);
+    border-radius: var(--border_radius_place_and_reviews);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.place-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.place-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.place-info {
+    background-color: var(--white);
+    border: var(--border_place_and_reviews);
+    border-radius: var(--border_radius_place_and_reviews);
+    padding: var(--padding_place_and_reviews);
+    margin: var(--margin_place_and_review_cards) 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.place-info-index {
+    padding: 20px;
+}
+
+.place-title {
+    font-size: 1.5rem;
+    color: var(--pink-dark);
+    margin: 0 0 10px 0;
+}
+
+.place-description {
+    color: var(--grey-medium);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.place-details-index {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.place-details {
+    color: var(--grey-medium);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.place-price {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.place-price span {
+    color: var(--grey-medium);
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.place-location {
+    color: var(--grey-medium);
+    font-size: 0.9rem;
+}
+
+.place-location i {
+    color: var(--accent);
+    margin-right: 5px;
+}
+
+.amenities-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.amenity-tag {
+    background-color: var(--purple-light);
+    color: var(--pink-dark);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+/* Filter section styles */
+.filter-section {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--border_radius_place_and_reviews);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#price-filter {
+    padding: 8px 12px;
+    border: 1px solid var(--grey-light);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--pink-dark);
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+#price-filter:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* Navigation styles */
+.nav {
+    background-color: var(--white);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.nav a:hover {
+    color: var(--primary);
+}
+
+/* Container styles */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Place card styles */
+.place-card {
+    background-color: var(--white);
+    border: var(--border_place_and_reviews);
+    border-radius: var(--border_radius_place_and_reviews);
+    padding: var(--padding_place_and_reviews);
+    padding-bottom: 25px;
+    margin: var(--margin_place_and_review_cards) 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.place-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--pink-dark);
+}
+
+.place-card p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--grey-medium);
+}
+
+.details-button {
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.details-button:hover {
+    background-color: var(--primary);
+}
+
+/* Place details styles */
+.place-details {
+    background-color: var(--white);
+    border: var(--border_place_and_reviews);
+    border-radius: var(--border_radius_place_and_reviews);
+    padding: var(--padding_place_and_reviews);
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: var(--margin_place_and_review_cards) 0;
+}
+
+.place-info {
+    margin-bottom: 20px;
+    color: var(--grey-medium);
+}
+
+.place-info p {
+    margin: 5px 0;
+}
+
+/* Review styles */
+.review-card {
+    background-color: var(--white);
+    border: var(--border_place_and_reviews);
+    border-radius: var(--border_radius_place_and_reviews);
+    padding: var(--padding_place_and_reviews);
+    margin: var(--margin_place_and_review_cards) 0;
+    text-align: left;
+}
+
+.review-card p {
+    margin: 5px 0;
+    color: var(--grey-medium);
+}
+
+/* Review specific styles */
+.review-card {
+    background-color: var(--white);
+    margin: var(--margin_place_and_review_cards);
+    padding: var(--padding_place_and_reviews);
+    border: var(--border_place_and_reviews);
+    border-radius: var(--border_radius_place_and_reviews);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-card .rating {
+    color: var(--accent);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.review-card .user {
+    color: var(--grey-medium);
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Consistent section spacing */
+section {
+    margin-bottom: 30px;
+}
+
+.place-details section {
+    margin-bottom: 40px;
+}
+
+/* Add review form styles */
+.add-review {
+    background-color: var(--white);
+    border: var(--border_place_and_reviews);
+    border-radius: var(--border_radius_place_and_reviews);
+    padding: var(--padding_place_and_reviews);
+    margin: var(--margin_place_and_review_cards) 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form textarea,
+.form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: var(--border_place_and_reviews);
+    border-radius: 5px;
+}
+
+.form button {
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.form button:hover {
+    background-color: var(--primary);
+}
+
+/* Login form styles */
+.login-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: var(--border_radius_place_and_reviews);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--grey-medium);
+}
+
+.login-form input {
+    width: 97%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: var(--border_place_and_reviews);
+    border-radius: 4px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: var(--primary);
+}
+
+.login-form button:disabled {
+    background-color: var(--grey-medium);
+    cursor: not-allowed;
+}
+
+.error-message {
+    background-color: var(--error);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Footer styles */
+.footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 1px 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Styles for the places listing page */
+.container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.container .filter {
+    margin-bottom: 20px;
+}
+
+.container .filter label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.container .filter select {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.places {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.place {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.place h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--pink-dark);
+}
+
+.place p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--grey-medium);
+}
+
+.place button {
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.place button:hover {
+    background-color: var(--primary);
+}
+
+/* Review page styles */
+.review-form {
+    background-color: var(--white);
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.review-form label,
+.review-form textarea,
+.review-form select {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.review-form textarea,
+.review-form select,
+.add-review textarea,
+.add-review select {
+    width: 97%;
+    padding: 15px;
+    border: var(--border_place_and_reviews);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    min-height: 120px;
+    resize: vertical;
+}
+
+.review-form select,
+.add-review select {
+    min-height: auto;
+    height: 45px;
+}
+
+.review-form button {
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.review-form button:hover {
+    background-color: var(--primary);
+}
+
+/* Additional review page styles */
+body.review-page {
+    text-align: center;
+    padding: 50px;
+}
+
+.review-page h1 {
+    font-size: 24px;
+    color: var(--pink-dark);
+}
+
+.review-page h2 {
+    font-size: 20px;
+    color: var(--pink-dark);
+}
+
+/* Place and Review Combined Page Styles */
+.property-details,
+.review,
+.add-review {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.property-details p,
+.review p {
+    margin: 5px 0;
+    color: var(--grey-medium);
+}
+
+.review {
+    margin-bottom: 10px;
+}
+
+.review p {
+    margin: 5px 0;
+    color: var(--grey-medium);
+}
+
+.add-review button {
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-review button:hover {
+    background-color: var(--primary);
+}
+
+/* Update existing styles for better consistency */
+h1,
+h2 {
+    text-align: center;
+    color: var(--pink-dark);
+}

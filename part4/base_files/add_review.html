@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Review - HBnB</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" href="images/icon.png">
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" alt="hbnb logo" src="images/logo.png">
+        <a href="login.html" class="login-button"></a>
+    </header>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="login.html" class="nav-login" id="login-link">Login</a>
+    </nav>
+
+    <main class="container">
+        <form id="review-form" class="review-form">
+            <h1>Reviewing: <span id="place-title">Loading...</span></h1>
+            <h2>Add a Review</h2>
+            <label for="review-text">Your Review:</label>
+            <textarea placeholder="Write your review here..." id="review-text" name="review-text" required></textarea>
+
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="">Select Rating</option>
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="2">2 Stars</option>
+                <option value="1">1 Star</option>
+            </select>
+
+            <button type="submit">Submit Review</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
